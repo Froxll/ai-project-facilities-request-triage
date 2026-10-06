@@ -1,0 +1,38 @@
+[
+  {
+    "subject": "Electrical request 1",
+    "text": "I need help with light. Please route this request to the correct team.",
+    "expected_category": "electrical",
+    "expected_priority": "medium"
+  },
+  {
+    "subject": "Electrical request 2",
+    "text": "I need help with power. Please route this request to the correct team. This is urgent.",
+    "expected_category": "electrical",
+    "expected_priority": "high"
+  },
+  {
+    "subject": "Plumbing request 1",
+    "text": "I need help with water. Please route this request to the correct team.",
+    "expected_category": "plumbing",
+    "expected_priority": "medium"
+  },
+  {
+    "subject": "Plumbing request 2",
+    "text": "I need help with leak. Please route this request to the correct team. This is urgent.",
+    "expected_category": "plumbing",
+    "expected_priority": "high"
+  },
+  {
+    "subject": "Heating request 1",
+    "text": "I need help with heating. Please route this request to the correct team.",
+    "expected_category": "heating",
+    "expected_priority": "medium"
+  },
+  {
+    "subject": "Heating request 2",
+    "text": "I need help with radiator. Please route this request to the correct team. This is urgent.",
+    "expected_category": "heating",
+    "expected_priority": "high"
+  }
+]
