@@ -1,0 +1,34 @@
+{
+"id": "g02",
+"title": "Facilities Request Triage",
+"categories": [
+"electrical",
+"plumbing",
+"heating"
+],
+"keywords": {
+"electrical": [
+"light",
+"lights",
+"power",
+"electric",
+"electrical"
+],
+"plumbing": [
+"water",
+"leak",
+"pipe",
+"plumbing"
+],
+"heating": [
+"heating",
+"radiator",
+"cold",
+"heat"
+]
+},
+"high_priority_words": [
+"urgent"
+],
+"instructions": "Route the facilities request to the correct maintenance category. Do not provide repair instructions. Return only a summary, category, priority and next_action for human review."
+}
