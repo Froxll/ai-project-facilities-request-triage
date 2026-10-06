@@ -17,10 +17,25 @@ class AnalysisProvider(Protocol):
 
 class MockAnalysisProvider:
     def analyze(self, request: Request, policy: dict) -> Analysis:
+        text = f"{request.subject} {request.text}".lower()
+        category = policy["categories"][0]
+        
+        for candidate, keywords in policy.get("keywords", {}).items():
+            if any(keyword.lower() in text for keyword in keywords):
+                category = candidate
+                break
+                
+        priority = "medium"
+        if any(
+            word.lower() in text
+            for word in policy.get("high_priority_words", [])
+        ):
+            priority = "high"
+            
         return Analysis(
             summary=f"{request.subject}: {request.text}"[:240],
-            category=policy["categories"][0],
-            priority="medium",
+            category=category,
+            priority=priority,
             next_action="Ask a reviewer to route the request.",
         )
 
