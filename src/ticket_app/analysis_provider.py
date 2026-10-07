@@ -76,6 +76,7 @@ class LocalAnalysisProvider:
                 {"role": "user", "content": json.dumps(user_payload)},
             ],
             "temperature": 0,
+            "max_tokens": 300,
         }
 
         try:
