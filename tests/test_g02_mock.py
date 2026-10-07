@@ -33,7 +33,7 @@ def test_g02_mock_fixtures(tmp_path, fixture):
     assert response.status_code == 200
     body = response.json()
     assert body["scenario"] == "g02"
-    assert body["analysis"]["category"] == "wrong-category"
+    assert body["analysis"]["category"] == fixture["expected_category"]
     assert body["analysis"]["priority"] == fixture["expected_priority"]
     assert body["requires_review"] is True
 
